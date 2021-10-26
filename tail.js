@@ -12,12 +12,12 @@ const assertEqual = function(actual, expected) {
 // assertEqual("Bootcamp", "Bootcamp");
 // assertEqual(1,2);
 
-const tail = function(arr){
+const tail = function(arr) {
   return arr.slice(1);
-}
+};
 
-const empty = []
-const one = [1]
+const empty = [];
+const one = [1];
 const words = ["Yo Yo", "Lighthouse", "Labs"];
 tail(words); // no need to capture the return value since we are not checking it
 assertEqual(empty.length, 1);
