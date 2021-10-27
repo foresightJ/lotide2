@@ -17,13 +17,17 @@ const assertEqual = function(actual, expected) {
 // This function should take in a collection of items and return counts for a specific subset of those items. 
 
 const countOnly = function(allItems, itemsToCount){
-  let count = {};
-  for (let item in allItems){
-    if (allItems.hasOwnProperty(item)){
-      count += item
+  const result = {};
+  for (const item of allItems){
+    if (itemsToCount[item]){
+      if (result[item]){
+        result[item] +=1;
+      }else result[item] = 1;
     }
+    console.log(item);
   }
-  return count;
+  console.log(result);
+  return result;
 }
 
 /*It won't count everything. In order to decide what to count,
