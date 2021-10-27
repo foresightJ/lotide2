@@ -10,17 +10,17 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// TEST CODE
-assertEqual("Bootcamp", "Bootcamp");
-assertEqual(1,2);
+// // TEST CODE
+// assertEqual("Bootcamp", "Bootcamp");
+// assertEqual(1,2);
 
 // This function should take in a collection of items and return counts for a specific subset of those items. 
 
 const countOnly = function(allItems, itemsToCount){
   let count = {};
-  for (let list in obj){
-    if (list){
-      count[""] = list
+  for (let item in allItems){
+    if (allItems.hasOwnProperty(item)){
+      count += item
     }
   }
   return count;
@@ -35,21 +35,21 @@ it will only count those, ignoring the others.
 Items in our case will be limited to Strings.*/
 
 
-// const firstNames = [
-//   "Karl",
-//   "Salima",
-//   "Agouhanna",
-//   "Fang",
-//   "Kavith",
-//   "Jason",
-//   "Salima",
-//   "Fang",
-//   "Joe"
-// ];
+const firstNames = [
+  "Karl",
+  "Salima",
+  "Agouhanna",
+  "Fang",
+  "Kavith",
+  "Jason",
+  "Salima",
+  "Fang",
+  "Joe"
+];
 
-/*const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
+const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
 
 assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
 assertEqual(result1["Fang"], 2);
-assertEqual(result1["Agouhanna"], undefined);*/
+assertEqual(result1["Agouhanna"], undefined);
