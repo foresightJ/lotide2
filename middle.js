@@ -2,7 +2,7 @@
 
 const middle = function(array) {
   if(array.length <= 2){
-      return []
+      return [];
   }
 
   const arr = array;
@@ -19,4 +19,4 @@ const middle = function(array) {
   return output
 }
 
-// console.log(middle([3,4,57,8,9,0]));
+module.exports = middle;
