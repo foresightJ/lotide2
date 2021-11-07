@@ -1,20 +1,17 @@
+"use strict";
 
-"use strict"
+const assert = require("chai").assert;
+const tail = require("../tail");
 
-const tail = require('../tail');
-const assertEqual = require('../assertEqual');
+describe("#tail", () => {
+  it("it returns ['Lighthouse', 'Labs'] for ['Hello', 'Lighthouse', 'Labs']", () => {
+    assert.deepEqual(tail(["Hello", "Lighthouse", "Labs"]), [
+      "Lighthouse",
+      "Labs",
+    ]);
+  });
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-// const empty = tail([]);
-
-
-// assertEqual(result, ['Lighthouse', 'Labs']);
-assertEqual(result.length, 2);
-assertEqual(result[0], "Lighthouse");
-assertEqual(result[1], "Labs");
-// assertEqual(empty, "");
-
-console.log(result);
-
-
-
+  it("returns [2, 3] for [1, 2, 3]", () => {
+    assert.deepEqual(tail([1, 2, 3]), [2, 3]);
+  });
+});
