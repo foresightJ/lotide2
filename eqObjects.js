@@ -27,11 +27,37 @@ const eqObjects = function (object1, object2) {
   }
   let output;
   for (el in object1) {
+    // console.log(el, object1[el]);
+    // console.log(`${el} : ${object1[el]}` === `${el} : ${object2[el]}`);
     if (`${el} : ${object1[el]}` === `${el} : ${object2[el]}`) {
       output = true;
+      // console.log("true");
     } else {
       output = false;
+      // console.log("false");
     }
   }
   return output;
 };
+// const ab = { a: "1", b: "2" };
+// const ba = { b: "2", a: "1" };
+// const abc = { a: "1", b: "2", c: "3" };
+// eqObjects(ab, abc);
+// eqObjects(ab, ba); // => true
+
+// console.log(eqObjects(ab, abc));
+// console.log(eqObjects(ab, ba));
+// assertEqual(eqObjects(ab, ba), true);
+// assertEqual(eqObjects(ab, abc), false);
+
+const cd = { c: "1", d: ["2", 3] };
+const dc = { d: ["2", 3], c: "1" };
+const cd2 = { c: "1", d: ["2", 3, 4] };
+
+assertEqual(cd, dc);
+
+// eqArrays(eqObjects(cd, dc));
+// eqObjects(cd, dc); // => true
+
+// eqArrays(eqObjects(cd, cd2));
+eqObjects(cd, cd2); // => false
