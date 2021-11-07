@@ -1,5 +1,5 @@
 {
-  "name": "lotide2",
+  "name": "@foresightj/lotide2",
   "version": "1.0.0",
   "description": "A library of ARR & OBJ functions",
   "main": "assertArraysEqual.js",
