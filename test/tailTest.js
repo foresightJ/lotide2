@@ -14,7 +14,7 @@ assertEqual(result[0], "Lighthouse");
 assertEqual(result[1], "Labs");
 // assertEqual(empty, "");
 
-
+console.log(result);
 
 
 
